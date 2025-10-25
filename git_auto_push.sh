@@ -25,3 +25,9 @@ if [ -n "$CHANGES" ]; then
 else
     echo "[`date '+%Y-%m-%d %H:%M:%S'`] No changes detected." >> "$LOG_FILE"
 fi
+
+# ============================================
+# 🧹  Log Cleanup (keep only 7 days)
+# ============================================
+find /root/EchoProPulse/discord_bot -type f -name "*.log" -mtime +7 -exec rm -f {} \; >> "$LOG_FILE" 2>&1
+echo "[`date '+%Y-%m-%d %H:%M:%S'`] 🧹 Cleaned logs older than 7 days." >> "$LOG_FILE"
