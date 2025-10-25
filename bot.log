@@ -1,0 +1,230 @@
+/root/EchoProPulse/discord_bot/main_discord.py:195: RuntimeWarning: coroutine 'send_offline_alert' was never awaited
+  print("⚠️ Could not send offline alert — event loop closed.")
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+✅ Starting EchoProPulse Discord Bot (v6) – Solana Monitor
+🔍 Token detected? YES
+✅ Discord bot logged in as EchoProPulse Bot#2058
+✅ Synced 4 slash commands with Discord.
+📢 Online alert sent to Discord.
+⚠️ Shutdown signal received — sending offline alert...
+⚠️ Could not send offline alert — event loop closed.
+[2025-10-25 19:44:47] [INFO    ] discord.client: logging in using static token
+[2025-10-25 19:44:48] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0e852c9247d60a2ed6606146ed78121b).
+/root/EchoProPulse/discord_bot/main_discord.py:195: RuntimeWarning: coroutine 'send_offline_alert' was never awaited
+  asyncio.set_event_loop(loop)
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+✅ Starting EchoProPulse Discord Bot (v6) – Solana Monitor
+🔍 Token detected? YES
+✅ Discord bot logged in as EchoProPulse Bot#2058
+✅ Synced 4 slash commands with Discord.
+📢 Online alert sent to Discord.
+⚠️ Shutdown signal received — sending offline alert...
+⚠️ Could not send offline alert — event loop closed.
+[2025-10-25 19:47:53] [INFO    ] discord.client: logging in using static token
+[2025-10-25 19:47:54] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 8964066bb7e0bf4fd4a730b25e801557).
+/root/EchoProPulse/discord_bot/main_discord.py:199: RuntimeWarning: coroutine 'send_offline_alert' was never awaited
+  asyncio.set_event_loop(loop)
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+✅ Starting EchoProPulse Discord Bot (v6) – Solana Monitor
+🔍 Token detected? YES
+✅ Discord bot logged in as EchoProPulse Bot#2058
+✅ Synced 4 slash commands with Discord.
+📢 Online alert sent to Discord.
+⚠️ Shutdown signal received — sending offline alert...
+⚠️ Could not send offline alert cleanly: Cannot run the event loop while another loop is running
+🧹 Clean shutdown complete.
+[2025-10-25 19:51:01] [INFO    ] discord.client: logging in using static token
+[2025-10-25 19:51:02] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: cf242b71b71ae730871892dd22d6b77e).
+/root/EchoProPulse/discord_bot/main_discord.py:204: RuntimeWarning: coroutine 'send_offline_alert' was never awaited
+  description=f"🚨 Bot shutdown detected at {datetime.now(EST):%Y-%m-%d %I:%M %p EST}",
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+✅ Starting EchoProPulse Discord Bot (v6) – Solana Monitor
+🔍 Token detected? YES
+✅ Discord bot logged in as EchoProPulse Bot#2058
+✅ Synced 4 slash commands with Discord.
+📢 Online alert sent to Discord.
+⚠️ Shutdown signal received — sending offline alert...
+⚠️ Could not send offline alert cleanly: This event loop is already running
+🧹 Clean shutdown complete.
+[2025-10-25 20:14:10] [INFO    ] discord.client: logging in using static token
+[2025-10-25 20:14:11] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 386d8ee8e66b17a0cecc5f77162c0135).
+/root/EchoProPulse/discord_bot/main_discord_v7.py:247: RuntimeWarning: coroutine 'send_offline_alert' was never awaited
+  print(f"⚠️ Could not send offline alert cleanly: {e}")
+RuntimeWarning: Enable tracemalloc to get the object allocation traceback
+🔁 Restored trading state: DISABLED
+✅ Starting EchoProPulse Discord Bot (v7) – Unified Control Panel
+🔍 Token detected? YES
+✅ Discord bot logged in as EchoProPulse Bot#2058
+✅ Synced 4 slash commands with Discord.
+📢 Online alert sent.
+⚠️ Shutdown signal received — sending offline alert.
+⚠️ Could not send offline alert cleanly: asyncio.run() cannot be called from a running event loop
+🧹 Clean shutdown complete.
+[2025-10-25 20:23:54] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:23:54] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:24:04] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:24:14] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:24:25] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:24:35] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:24:45] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:24:55] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:25:06] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:25:16] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:25:26] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:25:36] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:25:47] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:25:57] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:26:07] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:26:17] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:26:27] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:26:38] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:26:48] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:26:58] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:27:09] [STOP] Bot stopped cleanly.
+/root/EchoProPulse/discord_bot/venv/bin/python3: can't open file '/root/EchoProPulse/discord_bot/echopropulse_v9.py': [Errno 2] No such file or directory
+[2025-10-25 20:27:19] [STOP] Bot stopped cleanly.
+🔁 Restored trading state: DISABLED
+✅ Starting EchoProPulse Discord Bot (v9)
+🔍 Token found? YES
+[2025-10-25 20:27:29] [INFO    ] discord.client: logging in using static token
+[2025-10-25 20:27:30] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: cf323b67f6aa69687fbd1b8d019c94c4).
+✅ EchoProPulse Bot (v9) logged in as EchoProPulse Bot#2058
+✅ Synced 3 slash commands with Discord.
+📢 Online alert sent.
+⚠️ Shutdown signal received.
+🧹 Shutdown complete.
+[2025-10-25 20:27:46] [STOP] Bot stopped cleanly.
+🔁 Restored trading state: DISABLED
+✅ Starting EchoProPulse Discord Bot (v9)
+🔍 Token found? YES
+[2025-10-25 20:27:46] [INFO    ] discord.client: logging in using static token
+[2025-10-25 20:27:47] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 17406ce900d57253607c580fbc3de9ce).
+✅ EchoProPulse Bot (v9) logged in as EchoProPulse Bot#2058
+✅ Synced 3 slash commands with Discord.
+📢 Online alert sent.
+⚠️ Shutdown signal received.
+🧹 Shutdown complete.
+🔁 Restored trading state: DISABLED
+✅ Starting EchoProPulse Discord Bot (v9)
+🔍 Token found? YES
+[2025-10-25 20:36:48] [INFO    ] discord.client: logging in using static token
+[2025-10-25 20:36:49] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: b8683f07a7352d92dbfddd59ef20b73d).
+✅ EchoProPulse Bot (v9) logged in as EchoProPulse Bot#2058
+✅ Synced 3 slash commands with Discord.
+📢 Online alert sent.
+[2025-10-25 20:37:10] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'start'
+Traceback (most recent call last):
+  File "/root/EchoProPulse/discord_bot/venv/lib/python3.12/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/EchoProPulse/discord_bot/echopropulse_v9.py", line 188, in start
+    await inter.response.send_message(embed=embed, view=ControlPanel(is_admin), ephemeral=True)
+  File "/root/EchoProPulse/discord_bot/venv/lib/python3.12/site-packages/discord/interactions.py", line 855, in send_message
+    await adapter.create_interaction_response(
+  File "/root/EchoProPulse/discord_bot/venv/lib/python3.12/site-packages/discord/webhook/async_.py", line 221, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/EchoProPulse/discord_bot/venv/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/root/EchoProPulse/discord_bot/venv/lib/python3.12/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/EchoProPulse/discord_bot/venv/lib/python3.12/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'start' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+⚠️ Shutdown signal received.
+[2025-10-25 20:40:37] [ERROR   ] discord.ext.commands.bot: Ignoring exception in command None
+discord.ext.commands.errors.CommandNotFound: Command "reload" is not found
+🧹 Shutdown complete.
+🔁 Restored trading state: DISABLED
+✅ Starting EchoProPulse Discord Bot (v9)
+🔍 Token found? YES
+[2025-10-25 20:40:43] [INFO    ] discord.client: logging in using static token
+[2025-10-25 20:40:43] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3615885ac482a98bd4bf1626c74b5832).
+✅ EchoProPulse Bot (v9) logged in as EchoProPulse Bot#2058
+✅ Synced 3 slash commands with Discord.
+📢 Online alert sent.
+⚠️ Shutdown signal received.
+🧹 Shutdown complete.
+🔁 Restored trading state: DISABLED
+✅ Starting EchoProPulse Discord Bot (v9)
+🔍 Token found? YES
+=======================================
+✅ Environment Loaded Successfully
+🔹 Wallet: Ewbs7pvZeSrka1FZ8Tak2xSbE1sRqd7iH746N8sVno7e
+🔹 Admin ID: 1166517382064373841
+🔹 Channel ID: 1431634852347904070
+🔹 Version: v9
+=======================================
+[2025-10-25 20:45:38] [INFO    ] discord.client: logging in using static token
+[2025-10-25 20:45:38] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: c99247bb5b47d7d30e5ce765c7e77006).
+✅ EchoProPulse Bot (v9) logged in as EchoProPulse Bot#2058
+✅ Synced 4 slash commands with Discord.
+📢 Online alert sent.
+[2025-10-25 20:48:17] [ERROR   ] discord.app_commands.tree: Ignoring exception in command 'about'
+Traceback (most recent call last):
+  File "/root/EchoProPulse/discord_bot/venv/lib/python3.12/site-packages/discord/app_commands/commands.py", line 858, in _do_call
+    return await self._callback(interaction, **params)  # type: ignore
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/EchoProPulse/discord_bot/echopropulse_v9.py", line 219, in about
+    await inter.response.send_message(embed=embed, ephemeral=True)
+  File "/root/EchoProPulse/discord_bot/venv/lib/python3.12/site-packages/discord/interactions.py", line 855, in send_message
+    await adapter.create_interaction_response(
+  File "/root/EchoProPulse/discord_bot/venv/lib/python3.12/site-packages/discord/webhook/async_.py", line 221, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10062): Unknown interaction
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/root/EchoProPulse/discord_bot/venv/lib/python3.12/site-packages/discord/app_commands/tree.py", line 1310, in _call
+    await command._invoke_with_namespace(interaction, namespace)
+  File "/root/EchoProPulse/discord_bot/venv/lib/python3.12/site-packages/discord/app_commands/commands.py", line 883, in _invoke_with_namespace
+    return await self._do_call(interaction, transformed_values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/EchoProPulse/discord_bot/venv/lib/python3.12/site-packages/discord/app_commands/commands.py", line 876, in _do_call
+    raise CommandInvokeError(self, e) from e
+discord.app_commands.errors.CommandInvokeError: Command 'about' raised an exception: NotFound: 404 Not Found (error code: 10062): Unknown interaction
+⚠️ Shutdown signal received.
+🧹 Shutdown complete.
+🔁 Restored trading state: DISABLED
+✅ Starting EchoProPulse Discord Bot (v9)
+🔍 Token found? YES
+=======================================
+✅ Environment Loaded Successfully
+🔹 Wallet: Ewbs7pvZeSrka1FZ8Tak2xSbE1sRqd7iH746N8sVno7e
+🔹 Admin ID: 1166517382064373841
+🔹 Channel ID: 1431634852347904070
+🔹 Version: v9
+=======================================
+[2025-10-25 20:53:59] [INFO    ] discord.client: logging in using static token
+[2025-10-25 20:54:00] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: a35ca2db89b82fc7c3a6002af112e1e3).
+✅ EchoProPulse Bot (v9) logged in as EchoProPulse Bot#2058
+✅ Synced 4 slash commands with Discord.
+📢 Online alert sent.
+💚 Service-start alert sent.
+🆕 GitHub update alert sent.
