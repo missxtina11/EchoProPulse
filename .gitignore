@@ -205,3 +205,32 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ============================================
+# EchoProPulse Custom Ignores
+# ============================================
+
+# Local virtual environments & caches
+venv/
+ENV/
+.env
+__pycache__/
+
+# Logs and compressed archives
+*.log
+*.gz
+
+# Watchdog / runtime state
+heartbeat.log
+heartbeat.log.*
+live_state.txt
+
+# System and service artifacts
+*.service
+*.pid
+*.sock
+
+# Backup and temp files
+*.bak
+*.tmp
+*.swp
