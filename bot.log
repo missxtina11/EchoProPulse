@@ -228,3 +228,63 @@ discord.app_commands.errors.CommandInvokeError: Command 'about' raised an except
 📢 Online alert sent.
 💚 Service-start alert sent.
 🆕 GitHub update alert sent.
+🔁 Restored trading state: DISABLED
+✅ Starting EchoProPulse Discord Bot (v9)
+🔍 Token found? YES
+=======================================
+✅ Environment Loaded Successfully
+🔹 Wallet: Ewbs7pvZeSrka1FZ8Tak2xSbE1sRqd7iH746N8sVno7e
+🔹 Admin ID: 1166517382064373841
+🔹 Channel ID: 1431634852347904070
+🔹 Version: v9
+=======================================
+[2025-10-25 21:23:43] [INFO    ] discord.client: logging in using static token
+❌ Fatal error: Improper token has been passed.
+🔁 Restored trading state: DISABLED
+✅ Starting EchoProPulse Discord Bot (v9)
+🔍 Token found? YES
+=======================================
+✅ Environment Loaded Successfully
+🔹 Wallet: Ewbs7pvZeSrka1FZ8Tak2xSbE1sRqd7iH746N8sVno7e
+🔹 Admin ID: 1166517382064373841
+🔹 Channel ID: 1431634852347904070
+🔹 Version: v9
+=======================================
+[2025-10-25 21:24:04] [INFO    ] discord.client: logging in using static token
+❌ Fatal error: Improper token has been passed.
+🔁 Restored trading state: DISABLED
+✅ Starting EchoProPulse Discord Bot (v9)
+🔍 Token found? YES
+=======================================
+✅ Environment Loaded Successfully
+🔹 Wallet: Ewbs7pvZeSrka1FZ8Tak2xSbE1sRqd7iH746N8sVno7e
+🔹 Admin ID: 1166517382064373841
+🔹 Channel ID: 1431634852347904070
+🔹 Version: v9
+=======================================
+[2025-10-25 21:24:25] [INFO    ] discord.client: logging in using static token
+❌ Fatal error: Improper token has been passed.
+🔁 Restored trading state: DISABLED
+✅ Starting EchoProPulse Discord Bot (v9)
+🔍 Token found? YES
+=======================================
+✅ Environment Loaded Successfully
+🔹 Wallet: Ewbs7pvZeSrka1FZ8Tak2xSbE1sRqd7iH746N8sVno7e
+🔹 Admin ID: 1166517382064373841
+🔹 Channel ID: 1431634852347904070
+🔹 Version: v9
+=======================================
+[2025-10-25 21:24:45] [INFO    ] discord.client: logging in using static token
+❌ Fatal error: Improper token has been passed.
+🔁 Restored trading state: DISABLED
+✅ Starting EchoProPulse Discord Bot (v9)
+🔍 Token found? YES
+=======================================
+✅ Environment Loaded Successfully
+🔹 Wallet: Ewbs7pvZeSrka1FZ8Tak2xSbE1sRqd7iH746N8sVno7e
+🔹 Admin ID: 1166517382064373841
+🔹 Channel ID: 1431634852347904070
+🔹 Version: v9
+=======================================
+[2025-10-25 21:25:06] [INFO    ] discord.client: logging in using static token
+❌ Fatal error: Improper token has been passed.
