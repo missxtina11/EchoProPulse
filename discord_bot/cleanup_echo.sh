@@ -1,62 +1,92 @@
 #!/bin/bash
 # ============================================================
-# 🧹 EchoProPulse Smart Cleanup Script
-# Automatically removes old logs and notifies Discord via bot token.
+# 🧹 EchoProPulse Auto Cleanup Script
+# Logs all deletions, posts summary to Discord via bot, and restarts if space freed.
 # ============================================================
 
 BASE_DIR="/root/EchoProPulse"
 BOT_DIR="$BASE_DIR/discord_bot"
-ENV_FILE="$BOT_DIR/.env"
 LOG_FILE="$BOT_DIR/cleanup_echo.log"
+ENV_FILE="$BOT_DIR/.env"
 DATE=$(date '+%Y-%m-%d %H:%M:%S')
 
-echo "[$DATE] 🧹 Starting weekly cleanup..." >> "$LOG_FILE"
+echo "[$DATE] 🧹 Cleanup cycle started..." >> "$LOG_FILE"
 
-# Load Discord token and log channel ID from .env
+# --- Load environment variables
 if [ -f "$ENV_FILE" ]; then
     export $(grep -v '^#' "$ENV_FILE" | xargs)
 else
-    echo "[$DATE] ❌ .env not found. Cannot send Discord notifications." >> "$LOG_FILE"
+    echo "[$DATE] ⚠️ Missing .env file — cannot post to Discord." >> "$LOG_FILE"
 fi
 
-LOG_CHANNEL_ID="${DISCORD_LOG_CHANNEL_ID:-1431773496848945302}"
+# --- Debug environment (optional)
+{
+  echo "[$DATE] Debug environment check:"
+  echo "DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN:0:15}..."
+  echo "DISCORD_LOG_CHANNEL_ID=$DISCORD_LOG_CHANNEL_ID"
+} >> "$LOG_FILE"
 
-# Default channel if not defined
-LOG_CHANNEL_ID="${DISCORD_LOG_CHANNEL_ID:-1431773496848945302}"
+# --- Unified Python helper for Discord notifications
+function send_discord_message() {
+  local MESSAGE="$1"
+  /root/EchoProPulse/venv/bin/python3 - <<PY
+from discord_notify import notify_logs
+notify_logs("$MESSAGE")
+PY
+}
 
-# --- Remove common log/cache/temp files (older than 3 days)
-find "$BASE_DIR" -type f -name "*.log" -mtime +3 -exec rm -f {} \; 2>/dev/null
-find "$BASE_DIR" -type f -name "*.gz"  -mtime +3 -exec rm -f {} \; 2>/dev/null
-find "$BASE_DIR" -type f -name "*.tmp" -mtime +3 -exec rm -f {} \; 2>/dev/null
+# --- Check disk usage before cleanup
+DISK_BEFORE=$(df -h / | awk 'NR==2 {print $5 " used (" $3 " of " $2 ")"}')
 
-# --- Remove redundant generated files
-rm -f "$BASE_DIR/cron.log" "$BASE_DIR/last_commit.txt"
+# --- Define cleanup targets
+CLEAN_TARGETS=(
+    "/var/log/*.log"
+    "/var/log/journal/*"
+    "$BOT_DIR/*.log.*"
+    "$BOT_DIR/*.gz"
+    "$BASE_DIR/backups/*.gz"
+    "$BASE_DIR/backups/*.log"
+    "$BASE_DIR/*.tmp"
+)
 
-# --- Optionally remove old bot versions
-# rm -f "$BASE_DIR/main_discord_v7.py"
+# --- Delete files and summarize
+DELETED_COUNT=0
+for TARGET in "${CLEAN_TARGETS[@]}"; do
+    if ls $TARGET 1> /dev/null 2>&1; then
+        FILES=$(ls -1 $TARGET 2>/dev/null | wc -l)
+        DELETED_COUNT=$((DELETED_COUNT + FILES))
+        rm -f $TARGET 2>/dev/null
+        echo "[$DATE] 🗑️ Deleted $FILES files from $TARGET" >> "$LOG_FILE"
+    fi
+done
 
-# --- Clean Python cache folders
-find "$BASE_DIR" -type d -name "__pycache__" -exec rm -rf {} + 2>/dev/null
+# --- Check disk usage after cleanup
+DISK_AFTER=$(df -h / | awk 'NR==2 {print $5 " used (" $3 " of " $2 ")"}')
+
+# --- Prepare summary message
+SUMMARY="🧹 **EchoProPulse Auto-Cleanup Complete**
+🕒 $DATE
+🗑️ Files deleted: $DELETED_COUNT
+💽 Disk before: $DISK_BEFORE
+💽 Disk after: $DISK_AFTER"
+
+# --- Post summary to Discord log channel
+send_discord_message "$SUMMARY"
+echo "[$DATE] 📢 Posted summary to Discord log channel." >> "$LOG_FILE"
+
+# --- Auto-restart bot if >10% freed
+BEFORE_PCT=$(echo "$DISK_BEFORE" | grep -o '[0-9]\+')
+AFTER_PCT=$(echo "$DISK_AFTER" | grep -o '[0-9]\+')
+
+if [ -n "$BEFORE_PCT" ] && [ -n "$AFTER_PCT" ]; then
+    FREED=$((BEFORE_PCT - AFTER_PCT))
+    if [ "$FREED" -ge 10 ]; then
+        echo "[$DATE] 🔁 Freed ${FREED}% — restarting service..." >> "$LOG_FILE"
+        systemctl restart echopropulse.service
+        send_discord_message "🔁 **EchoProPulse Auto-Restarted** after freeing ${FREED}% disk space during cleanup."
+        echo "[$DATE] 📢 Restart alert sent to Discord log channel." >> "$LOG_FILE"
+    fi
+fi
 
 echo "[$DATE] ✅ Cleanup complete." >> "$LOG_FILE"
-
-# --- Prepare Discord message
-MESSAGE_CONTENT="🧹 **EchoProPulse Cleanup Completed**
-🕓 Time: $DATE
-📦 Server: $(hostname)
-📁 Folder: $BASE_DIR
-✅ Old logs, temp files, and caches removed."
-
-# --- Post to Discord logs channel using bot token
-if [ -n "$DISCORD_BOT_TOKEN" ]; then
-    curl -H "Authorization: Bot $DISCORD_BOT_TOKEN" \
-         -H "Content-Type: application/json" \
-         -X POST \
-         -d "{\"content\": \"$MESSAGE_CONTENT\"}" \
-         "https://discord.com/api/v10/channels/$LOG_CHANNEL_ID/messages" >/dev/null 2>&1
-    echo "[$DATE] ✅ Discord notification sent to channel $LOG_CHANNEL_ID." >> "$LOG_FILE"
-else
-    echo "[$DATE] ⚠️ Discord bot token missing, no message sent." >> "$LOG_FILE"
-fi
-
 exit 0
