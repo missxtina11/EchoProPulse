@@ -236,9 +236,14 @@ async def graceful_shutdown():
     print("🧹 Clean shutdown complete.")
     await bot.close()
 
-def handle_signal(signum, frame):
-    asyncio.run(graceful_shutdown())
-    sys.exit(0)
+import asyncio
+
+def handle_signal(*_):
+    try:
+        loop = asyncio.get_event_loop()
+        loop.create_task(graceful_shutdown())
+    except RuntimeError:
+        asyncio.run(graceful_shutdown())
 
 signal.signal(signal.SIGTERM, handle_signal)
 signal.signal(signal.SIGINT, handle_signal)
